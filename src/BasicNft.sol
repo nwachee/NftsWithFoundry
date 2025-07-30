@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract BasicNft is ERC721 {
     uint256 private s_tokenCounter;
-    mapping (uint256 => string) s_tokenIdtoUri;
+    mapping(uint256 => string) s_tokenIdtoUri;
 
     constructor() ERC721("RandomNFT", "ANY") {
         s_tokenCounter = 0;
