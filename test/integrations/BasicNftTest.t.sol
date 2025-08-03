@@ -2,8 +2,8 @@
 pragma solidity ^0.8.19;
 
 import {Test} from "forge-std/Test.sol";
-import {BasicNft} from "../src/BasicNft.sol";
-import {DeployBasicNft} from "../script/DeployBasicNft.s.sol";
+import {BasicNft} from "../../src/BasicNft.sol";
+import {DeployBasicNft} from "../../script/DeployBasicNft.s.sol";
 import {IERC721Receiver} from "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
 contract BasicNftTest is Test, IERC721Receiver {
