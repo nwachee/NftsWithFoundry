@@ -12,7 +12,7 @@ Learning NFTs the fun way
 
 ## Quickstart
 
-```
+```js
 git clone https://github.com/nwachee/NftsWithFoundry.git
 cd NftsWithFoundry
 forge build
@@ -60,7 +60,7 @@ Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesn
 
 Create a ```.env``` file in the root folder:
 
-```bash
+```js
 SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY
 PRIVATE_KEY=your_private_key_without_0x
 ETHERSCAN_API_KEY=your_etherscan_api_key
@@ -70,13 +70,13 @@ ETHERSCAN_API_KEY=your_etherscan_api_key
 
 ##### 2. **Deploy (IPFS NFT)**
 
-```
+```js
 make deploy ARGS="--network sepolia"
 ```
 
 ##### 3. **Deploy (SVG NFT)**
 
-```
+```js
 make deploySvg ARGS="--network sepolia"
 ```
 
@@ -86,13 +86,13 @@ After deploy to a testnet or local net, you can run the scripts.
 
 Using cast deployed locally example: 
 
-```
+```js
 cast send <RAFFLE_CONTRACT_ADDRESS> "enterRaffle()" --value 0.1ether --private-key <PRIVATE_KEY> --rpc-url $SEPOLIA_RPC_URL
 ```
 
 or, to create a ChainlinkVRF Subscription:
 
-```
+```js
 make createSubscription ARGS="--network sepolia"
 ```
 
@@ -100,13 +100,13 @@ make createSubscription ARGS="--network sepolia"
 
 To get the base64 of an image, you can use the following command:
 
-```
+```js
 echo "data:image/svg+xml;base64,$(base64 -i ./images/dynamicNft/happy.svg)"
 ```
 
 Then, you can get the base64 encoding of the json object by placing the imageURI into `happy_image_uri.json` then running:
 
-```
+```js
 echo "data:application/json;base64,$(base64 -i ./images/dynamicNft/happy_image_uri.json)"
 ```
 
